@@ -1,7 +1,5 @@
 ---
 layout: default
-list_title: Articles
-section_head: Articles
 ---
 
 <div class="home">
@@ -11,8 +9,30 @@ section_head: Articles
 
   {{ content }}
 
+  {%- if site.categories.size > 0 -%}
+    <h2 class="categories-list-heading">{{ "Categories" | default: "posts" }}</h2>
+    <div class="categories-list">
+      {%- for category in site.data.viewable_categories.categories -%}
+      <div class="categories-list-item">
+        <a class="categories-item-anchor" href="{{ category[0] | relative_url }}/index.html">
+          {%- if category[1].thumbnail == true -%}
+          <div class="categories-item-image">
+            <img src="../static/thumbnails/categories/{{ category[0] | default}}.png">
+          </div>
+          {%- endif -%}
+          <div class="categories-item-heading">
+            <h3 class="categories-heading">
+              {{ category[0] | escape }}
+            </h3>
+          </div>
+        </a>
+      </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.section_head | default: "posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "posts" }}</h2>
     <div class="post-list">
       {%- for post in site.posts -%}
       <div class="post-list-item">
