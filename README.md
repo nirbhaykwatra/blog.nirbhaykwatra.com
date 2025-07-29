@@ -8,3 +8,4 @@
 - Add cool glow animation to title text when hovering over it.
 - Add categories as small buttons to each post page. When clicked, user is taken to the page of the relevant category.
 - Create hidden pages for hidden categories.
+- Make theme/website responsive
