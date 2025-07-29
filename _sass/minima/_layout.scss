@@ -310,7 +310,7 @@
 
 .categories-list-heading {
   @include relative-font-size(2.5);
-  margin: 0 0 0 $spacing-unit;
+  margin: 0 0 15px $spacing-unit;
   font-family: "Bitcount";
 }
 
@@ -325,8 +325,7 @@
 .categories-list-item {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  border-radius: 10px;
+  margin: 0 25px 0 25px;
   background-color: $background-color;
   position: relative;
   transition: transform 0.2s ease-out, box-shadow 0.2s;
