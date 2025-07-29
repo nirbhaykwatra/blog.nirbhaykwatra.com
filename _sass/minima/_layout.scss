@@ -37,9 +37,9 @@
 }
 
 .site-title {
-  @include relative-font-size(3);
-  font-weight: 700;
-  font-family: "Space Mono";
+  @include relative-font-size(4);
+  font-weight: 400;
+  font-family: "Bitcount";
   letter-spacing: 4px;
   line-height: $base-line-height * $base-font-size * 2;
   margin-bottom: 0;
@@ -52,10 +52,12 @@
 }
 
 .site-subtitle {
-  @include relative-font-size(1);
+  @include relative-font-size(1.5);
+  font-family: "Space Mono";
   font-weight: 400;
   line-height: $base-line-height * $base-font-size * 0.5;
-  letter-spacing: -1px;
+  letter-spacing: 4px;
+  margin-top: 5px;
   margin-bottom: 0;
   float: left;
 }
@@ -166,7 +168,7 @@
 .footer {
   @include relative-font-size(0.9375);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   color: $grey-color;
   margin-left: -$spacing-unit * 0.5;
   margin-right: -$spacing-unit * 0.5;
@@ -180,6 +182,8 @@
 .footer-socials {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 0 $spacing-unit 0 $spacing-unit;
 }
 
 .footer-description {
@@ -237,6 +241,10 @@
     left: 0;
     text-decoration: none;
   }
+
+  a:hover {
+    color: $brand-color;
+  }
 }
 
 .post-list-item:hover {
@@ -245,7 +253,15 @@
   transform: translate(-0.5rem, -0.5ex);
 }
 
+.post-list-item-heading {
+  font-family: "Jersey 10";
+  font-weight: 400;
+  line-height: 1;
+  @include relative-font-size(2.5);
+}
+
 .post-excerpt {
+  font-family: "Space Mono";
   margin-top: -10px;
   color: white;
 }
@@ -253,11 +269,6 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
-}
-
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
 }
 
 
@@ -271,10 +282,10 @@
 }
 
 .post-title {
-  @include relative-font-size(4);
+  @include relative-font-size(6);
   line-height: 1;
-  font-family: "Montserrat";
-  font-weight: 900;
+  font-family: "Jersey 10";
+  font-weight: 400;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -283,6 +294,8 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  font-family: "Montserrat";
+  letter-spacing: -1px;
 
   h1 {
     @include relative-font-size(2.25);

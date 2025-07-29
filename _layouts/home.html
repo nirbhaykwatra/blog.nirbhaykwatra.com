@@ -20,7 +20,7 @@ list_title: "Articles"
           <img src="../static/thumbnails/{{ post.thumbnail | default}}.png">
           <div class="post-item-content">
             <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
+            <h3 class="post-list-item-heading">
               <!--<a class="post-link" href="{{ post.url | relative_url }}">-->
                 {{ post.title | escape }}
               <!--</a>-->
