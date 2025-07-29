@@ -1,6 +1,7 @@
 ---
 layout: default
-list_title: "Articles"
+list_title: Articles
+section_head: Articles
 ---
 
 <div class="home">
@@ -11,7 +12,7 @@ list_title: "Articles"
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.section_head | default: "posts" }}</h2>
     <div class="post-list">
       {%- for post in site.posts -%}
       <div class="post-list-item">
