@@ -44,11 +44,29 @@
   line-height: $base-line-height * $base-font-size * 2;
   margin-bottom: 0;
   float: left;
+  overflow: hidden;
+
+  /* Fallback: Set a background color. */
+  background-color: #ffffff;
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
 
   &,
   &:visited {
     color: $white-color;
   }
+}
+
+.site-title:hover {
+  text-decoration: none;
 }
 
 .site-subtitle {
@@ -62,9 +80,6 @@
   float: left;
 }
 
-.site-title:hover {
-  text-decoration: none;
-}
 
 .site-nav {
   float: right;
@@ -226,8 +241,8 @@
   transition: transform 0.2s ease-out, box-shadow 0.2s;
 
   img {
-    margin-bottom: $spacing-unit - 20;
     border-radius: 10px;
+    transition: transform 0.5s ease-out;
     
     background-color: #FFFFFF;	
     position: relative;
@@ -251,13 +266,23 @@
   background-color: rgb(20, 20, 20);
   box-shadow: 10px 10px 30px -11px rgba($color: #FFFFFF, $alpha: 0.5);
   transform: translate(-0.5rem, -0.5ex);
+
+  img {
+    transform: scale(1.1);
+  }
 }
 
-.post-list-item-heading {
+.post-item-heading {
   font-family: "Jersey 10";
   font-weight: 400;
   line-height: 1;
   @include relative-font-size(2.5);
+}
+
+.post-item-image {
+  margin-bottom: $spacing-unit - 20;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .post-excerpt {

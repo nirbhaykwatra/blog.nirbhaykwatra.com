@@ -17,10 +17,12 @@ list_title: "Articles"
       <div class="post-list-item">
         <a class="post-item-anchor" href="{{ post.url | relative_url }}">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <img src="../static/thumbnails/{{ post.thumbnail | default}}.png">
+          <div class="post-item-image">
+            <img src="../static/thumbnails/{{ post.thumbnail | default}}.png">
+          </div>
           <div class="post-item-content">
             <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3 class="post-list-item-heading">
+            <h3 class="post-item-heading">
               <!--<a class="post-link" href="{{ post.url | relative_url }}">-->
                 {{ post.title | escape }}
               <!--</a>-->
