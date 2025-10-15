@@ -396,6 +396,24 @@
 /**
  * Posts
  */
+
+.post.h-entry {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 25));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 25));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit * 1;
+    padding-left: $spacing-unit * 1;
+  }
+}
+
 .post-header {
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
