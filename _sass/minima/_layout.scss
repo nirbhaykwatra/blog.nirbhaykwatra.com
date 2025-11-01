@@ -398,8 +398,8 @@
  */
 
 .post.h-entry {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 25));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 25));
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 15));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 15));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
